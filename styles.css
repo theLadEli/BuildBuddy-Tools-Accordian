@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Assets/Aeonik/Aeonik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Assets/Aeonik/Aeonik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('Assets/Aeonik/Aeonik-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+body {
+    background-color: #0C1C2C;
+    font-family: "Aeonik", sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column,
+.right-column,
+.middle-column {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* Left Column */
+
+.left-column {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.circle {
+    width: 7px;
+    height: 7px;
+    background: rgba(217, 217, 217, 0.55);
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.active-circle {
+    width: 11px;
+    height: 11px;
+    background: #D9D9D9;
+}
+
+/* Middle Column */
+
+.middle-column {
+    padding: 20px 40px 40px 40px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid #E6E9F0;
+    background: #FFF;
+    box-shadow: 0px 4px 92px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Right Column */
+
+.right-column {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.arrow-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.bottom-text {
+    text-align: center;
+    color: white;
+}
+
+/* Testimonial Content */
+
+.testimonial-content {
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;  /* Add this line for fade effect */
+}
+
+
+
+.testimonial-left-column {
+    width: 5%;
+}
+
+.testimonial-left-column img {
+    width: 100%;
+    box-shadow: 0px 1px 21px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 50%
+}
+
+.testimonial-right-column {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.testimonial-right-column h3 {
+    font-family: 'Aeonik', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #0FABAB;
+    margin-top: 17px;
+}
+
+.testimonial-right-column p {
+    font-family: 'Aeonik', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+}
+
+#up-arrow, #down-arrow {
+    cursor: pointer;
+}

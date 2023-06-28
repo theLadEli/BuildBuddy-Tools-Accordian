@@ -1,0 +1,282 @@
+<style>
+.container {
+    display: flex;
+}
+
+.left-column,
+.right-column,
+.middle-column {
+    box-sizing: border-box;
+}
+
+
+/* Left Column */
+
+.left-column {
+    padding-right: 15px;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.circle {
+    width: 7px;
+    height: 7px;
+    background: rgba(217, 217, 217, 0.55);
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.active-circle {
+    width: 11px;
+    height: 11px;
+    background: #D9D9D9;
+}
+
+/* Middle Column */
+
+.middle-column {
+    padding: 20px 40px 40px 40px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid #E6E9F0;
+    background: #FFF;
+    box-shadow: 0px 4px 92px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Right Column */
+
+.right-column {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.arrow-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.bottom-text {
+    text-align: center;
+    color: white;
+}
+
+/* Testimonial Content */
+
+.testimonial-content {
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;  /* Add this line for fade effect */
+}
+
+
+
+.testimonial-left-column {
+    width: 10%;
+}
+
+.testimonial-left-column img {
+    width: 100%;
+    box-shadow: 0px 1px 21px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 50%
+}
+
+.testimonial-right-column {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.testimonial-right-column h3 {
+    font-family: 'Aeonik', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #0FABAB;
+    margin-top: 10px;
+}
+
+.testimonial-right-column p {
+    font-family: 'Aeonik', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+}
+
+#up-arrow, #down-arrow {
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+    
+
+    <section id="testimonials">
+
+        <div class="container">
+            <div class="left-column">
+
+                <div class="circle-container">
+                    <div class="circle active-circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+
+            </div>
+            <div class="middle-column">
+
+                <div class="testimonial-content">
+                    <div class="testimonial-left-column">
+                        <img src="http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png"
+                            alt="creating-detailed-specifications">
+                    </div>
+                    <div class="testimonial-right-column">
+                        <h3>2. Creating Detailed Specifications</h3>
+                        <p>
+                            Creating specifications with BuildBuddy is a clear, three-step process. You'll start by
+                            setting General Requirements for your entire project. Then you'll craft Room Specifications,
+                            detailing the needs of each space in your extension. Lastly, you'll outline any Renovation
+                            Specifications for existing space upgrades. For projects extending beyond the main
+                            building—like landscaping or garden rooms—these go under Additional Specifications.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right-column">
+
+                <div class="arrow-icons">
+                    <img src="http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Arrow-Up.png" alt="arrow-up" id="up-arrow">
+                    <img src="http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Arrow-Down.png" alt="arrow-down" id="down-arrow">
+                </div>
+
+                <div class="bottom-text">2/6</div>
+
+            </div>
+
+    </section>
+
+<script>
+    let currentIndex = 0;
+let carouselItems = 
+    [
+        {
+            "img": "http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png",
+            "heading": "1. Select your Specifications",
+            "body": "Your approved plans detail the shell of your extension and may include crucial construction details your builder needs. What goes into the space you’re creating such as the type of flooring, lighting, heating etc. are referred to as your “Specifications”. These details are important as it enables your builders to understand the full scope of works involved. With this detail they can provide you with an accurate quote. Selecting your Specifications with BuildBuddy is an easy-to-follow step-by-step process. You will be guided along the way about your options to make informed decisions. Once you’re done you will have a detailed scope of work to share with builders."
+        },
+    
+        {
+            "img": "http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png",
+            "heading": "2. Product Selection",
+            "body": "Once you know what is going to be included within the scope of your extension then it’s time to start the product selection process. A typical single-storey extension will require you to purchase between 50-100 different products, from light fittings to kitchen appliances, flooring and much more. [See a typical list of products for a single storey extension]. BuildBuddy turns this complex task into a seamless process, helping you find products that fit your specifications and budget."
+        },
+    
+        {
+            "img": "http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png",
+            "heading": "3. Engaging Your Builder",
+            "body": "Once your specifications and product selections are complete, you're ready to engage your builder. Providing a comprehensive project breakdown removes the guesswork and enables your builder to provide a precise quote. This clarity makes comparisons between quotes much easier and eliminates unforeseen costs. Builders love this about BuildBuddy—it simplifies communication and ensures they're fully aligned with your vision."
+        },
+    
+        {
+            "img": "http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png",
+            "heading": "4. Budgeting & Cash Flow Management",
+            "body": "Beyond planning, BuildBuddy assists you in managing your budget. From the specification stage to engaging your builder, we provide a clear view of your cash flow. This way, your project stays financially on track from start to finish."
+        },
+    
+        {
+            "img": "http://staging15.buildbuddy.co/wp-content/uploads/2023/06/Creating-Detailed-Specifications-Icon.png",
+            "heading": "Throughout Your Journey: Task Management",
+            "body": "Home extensions involve a myriad of tasks and decision points. BuildBuddy's interactive checklist and comprehensive knowledge base keep you organized and informed, ensuring a smooth, stress-free journey."
+        }
+    ];
+    
+let autoNavigate;
+
+// Automatic navigation
+function startAutoNavigate() {
+    autoNavigate = setInterval(() => {
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        renderCarousel();
+    }, 10000); // every 10 seconds
+}
+
+// Stop automatic navigation
+function stopAutoNavigate() {
+    clearInterval(autoNavigate);
+}
+
+document.querySelector('.testimonial-content').addEventListener('mouseover', stopAutoNavigate);
+document.querySelector('.testimonial-content').addEventListener('mouseout', startAutoNavigate);
+
+function renderCarousel() {
+    // Get elements
+    let carousel = document.querySelector('.testimonial-content');
+    let indicators = document.querySelectorAll('.circle-container .circle');
+    let counter = document.querySelector('.bottom-text');
+
+    // Fade out current item
+    carousel.style.opacity = '0';
+
+    // Delay to let the fade out effect finish
+    setTimeout(() => {
+        // Update carousel content
+        let item = carouselItems[currentIndex];
+        carousel.querySelector('.testimonial-left-column img').src = item.img;
+        carousel.querySelector('.testimonial-right-column h3').innerText = item.heading;
+        carousel.querySelector('.testimonial-right-column p').innerText = item.body;
+
+        // Update active indicator
+        indicators.forEach((indicator, index) => {
+            if(index === currentIndex) {
+                indicator.classList.add('active-circle');
+            } else {
+                indicator.classList.remove('active-circle');
+            }
+        });
+
+        // Update counter
+        counter.innerText = (currentIndex+1) + "/" + carouselItems.length;
+
+        // Fade in new item
+        carousel.style.opacity = '1';
+    }, 500);  // Delay in ms; this should be the same as the CSS transition duration
+}
+
+// Adjusted arrow click handlers for continuous looping
+document.querySelector('.arrow-icons img[alt="arrow-up"]').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    renderCarousel();
+});
+
+document.querySelector('.arrow-icons img[alt="arrow-down"]').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    renderCarousel();
+});
+
+// Initial render and start of automatic navigation
+renderCarousel();
+startAutoNavigate();
+
+</script>
+</body>
+</html>
